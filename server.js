@@ -12,7 +12,8 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({ origin: 'https://topclass1.vercel.app/', // or '*'
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], }));
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],   
+    credentials:true }));
 
 const productsRoute = require('./routes/productsRoute');
 const userRoute = require('./routes/userRoute');
